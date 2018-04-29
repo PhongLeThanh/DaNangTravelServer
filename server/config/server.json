@@ -1,0 +1,11 @@
+{
+  "development": {
+    "server_key": "AAAAsFWYl7Y:APA91bFmW1mcUTG-5UWooaRCFK91mj6wt8YTzUg39ymOZXruVH3FjP3wyPG8dsMonXszU5EaJcVWLSgOaw8JG1qdmU3hdi8JIQXX133RPWRHNUWitfsZvizaeQJmShuow0yjuAS6t4xL"
+  },
+  "staging": {
+
+  },
+  "production": {
+
+  }
+}
