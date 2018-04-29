@@ -42,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
-              <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -273,11 +273,12 @@
       <workItem from="1524821090239" duration="2025000" />
       <workItem from="1524917665270" duration="14391000" />
       <workItem from="1524962805167" duration="4577000" />
+      <workItem from="1524968060562" duration="529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43500000" />
+    <option name="totallyTimeSpent" value="43795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1984" y="-11" width="1303" height="780" extended-state="6" />
@@ -567,9 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,7 +643,7 @@
     <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
