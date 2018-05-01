@@ -6,6 +6,10 @@ import CategoryRepository from './CategoryRepository';
 import RestaurantRepository from './RestaurantRepository';
 import HotelRepository from './HotelRepository';
 import TouristAttractionRepository from './TouristAttractionRepository';
+import UserRepository from './UserRepository';
+import ProfileRepository from './ProfileRepository';
+import CommentRepository from './CommentRepository';
+import ImageRepository from './ImageRepository';
 
 module.exports = {
     BaseRepository,
@@ -15,5 +19,9 @@ module.exports = {
     CategoryRepository,
     RestaurantRepository,
     HotelRepository,
-    TouristAttractionRepository
+    TouristAttractionRepository,
+    UserRepository,
+    ProfileRepository,
+    CommentRepository,
+    ImageRepository
 };

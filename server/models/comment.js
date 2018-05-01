@@ -35,13 +35,14 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    },  {
-        classMethods: {
-            associate: function (models) {
-                comment.belongsTo(models.user, {foreignKey: 'userId'});
-                comment.belongsTo(models.place, {foreignKey: 'placeId'});
-            }
-        }
     });
+    comment.associate = (models) =>{
+        models.comment.belongsTo(models.user,{
+            foreignKey: 'userId'
+        });
+        models.comment.belongsTo(models.place,{
+            foreignKey: 'placeId'
+        });
+    }
     return comment;
 };

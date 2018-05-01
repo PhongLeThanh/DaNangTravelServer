@@ -31,13 +31,14 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {
-        classMethods: {
-            associate: function (models) {
-                touristattraction.belongsTo(models.place, {primaryKey: 'placeId'});
-                touristattraction.belongsTo(models.category, {foreignKey: 'categoryId'});
-            }
-        }
     });
+    touristattraction.associate = (models) => {
+        models.touristattraction.belongsTo(models.place, {
+            primaryKey: 'id', foreignKey: 'id'
+        });
+        models.touristattraction.belongsTo(models.category, {
+            foreignKey: 'categoryId',
+        });
+    };
     return touristattraction;
 };

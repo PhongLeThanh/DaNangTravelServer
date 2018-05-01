@@ -6,6 +6,8 @@ import CategoryController from './CategoryController';
 import RestaurantController from './RestaurantController';
 import HotelController from './HotelController';
 import TouristAttractionController from  './TouristAttractionController';
+import UserController from './UserController'
+import ProfileController from './ProfileController'
 
 module.exports = {
     DataController,
@@ -15,5 +17,7 @@ module.exports = {
     CategoryController,
     RestaurantController,
     HotelController,
-    TouristAttractionController
+    TouristAttractionController,
+    UserController,
+    ProfileController
 };

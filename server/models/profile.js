@@ -33,12 +33,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    },  {
-        classMethods: {
-            associate: function (models) {
-                profile.belongsTo(models.user, {primaryKey: 'id'});
-            }
-        }
     });
+    profile.associate = models =>{
+        models.profile.belongsTo(models.user,{
+            primaryKey:'id',foreignKey:'id'
+        })
+    };
     return profile;
 };

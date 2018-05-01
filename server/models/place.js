@@ -50,16 +50,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    },
-    //     {
-    //     classMethods: {
-    //         associate :function (models) {
-    //             models.place.belongsTo(models.location, {foreignKey: 'locationId'});
-    //             models.place.belongsTo(models.category, {foreignKey: 'categoryId'});
-    //         }
-    //     }
-    // }
-    );
+    });
     place.associate = (models) => {
         models.place.belongsTo(models.category, {
             foreignKey: 'categoryId',
@@ -67,6 +58,19 @@ module.exports = (sequelize, DataTypes) => {
         models.place.belongsTo(models.location,{
            foreignKey: 'locationId',
         });
+        models.place.hasOne(models.restaurant,{
+            primaryKey: 'id', foreignKey : 'id'
+        });
+        models.place.hasOne(models.hotel,{
+            primaryKey: 'id', foreignKey : 'id'
+        });
+        models.place.hasOne(models.touristattraction,{
+            primaryKey: 'id', foreignKey : 'id'
+        });
+        models.place.hasMany(models.comment,{
+            primaryKey:'id',foreignKey : 'placeId'
+        });
+
     };
     return place;
 };
