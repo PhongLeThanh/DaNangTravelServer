@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER,
             references: {
-                model: 'users',
+                model: 'user',
                 key: 'id'
             }
         },
@@ -33,9 +33,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {});
-    profile.associate = function (models) {
-        // associations can be defined here
-    };
+    },  {
+        classMethods: {
+            associate: function (models) {
+                profile.belongsTo(models.user, {primaryKey: 'id'});
+            }
+        }
+    });
     return profile;
 };

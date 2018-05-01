@@ -1,32 +1,31 @@
 'use strict';
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('comments', {
+        return queryInterface.createTable('restaurant', {
             id: {
                 allowNull: false,
-                autoIncrement: true,
                 primaryKey: true,
-                type: Sequelize.INTEGER
-            },
-            userId: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'users',
+                    model: 'place',
                     key: 'id'
                 }
             },
-            placeId: {
+            categoryId: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'places',
+                    model: 'category',
                     key: 'id'
                 }
             },
-            content: {
+            website: {
                 type: Sequelize.STRING
             },
-            evaluate: {
-                type: Sequelize.INTEGER
+            time: {
+                type: Sequelize.STRING
+            },
+            moreInformation: {
+                type: Sequelize.STRING
             },
             createdAt: {
                 allowNull: false,
@@ -39,6 +38,6 @@ module.exports = {
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('comments');
+        return queryInterface.dropTable('restaurant');
     }
 };

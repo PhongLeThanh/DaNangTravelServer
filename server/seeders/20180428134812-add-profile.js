@@ -5,8 +5,8 @@ const profile = require('../models').profile;
 module.exports = {
     up: (queryInterface, Sequelize) => {
         // return profile.create({
-        //     id: '3',
-        //     fullname: 'Le Thanh Phong',
+        //     id: '1',
+        //     fullname: 'Ad van Min',
         //     age: '23',
         //     address: 'Hai Chau, Da Nang',
         //     avatar: '',

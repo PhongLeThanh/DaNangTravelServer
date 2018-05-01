@@ -3,7 +3,8 @@ const hotel = require('../models').hotel;
 module.exports = {
     up: (queryInterface, Sequelize) => {
         // return hotel.create({
-        //     id: '2',
+        //     id: '5',
+        //     categoryId:'2',
         //     cost: '2000000',
         //     moreInformation: 'Thong tin them ve dich vu'
         // })

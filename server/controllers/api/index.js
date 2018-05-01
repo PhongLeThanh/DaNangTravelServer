@@ -1,13 +1,19 @@
 import DataController from './DataController';
-import StudentController from './StudentController';
 import LocationController from './LocationController';
 import DistrictController from './DistrictController';
 import PlaceController from './PlaceController';
+import CategoryController from './CategoryController';
+import RestaurantController from './RestaurantController';
+import HotelController from './HotelController';
+import TouristAttractionController from  './TouristAttractionController';
 
 module.exports = {
     DataController,
-    StudentController,
     LocationController,
     DistrictController,
-    PlaceController
+    PlaceController,
+    CategoryController,
+    RestaurantController,
+    HotelController,
+    TouristAttractionController
 };

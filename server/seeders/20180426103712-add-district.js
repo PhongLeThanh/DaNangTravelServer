@@ -5,7 +5,7 @@ module.exports = {
         // return district.create({
         //     id: '4307',
         //     cityId: '43',
-        //     districtName: 'Cẩm Lệ'
+        //     districtName: 'Hoà Vang'
         // })
         //     .then(district => {
         //         console.log(district)

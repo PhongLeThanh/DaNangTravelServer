@@ -6,7 +6,14 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER,
             references: {
-                model: 'places',
+                model: 'place',
+                key: 'id'
+            }
+        },
+        categoryId: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'category',
                 key: 'id'
             }
         },
@@ -27,9 +34,13 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {});
-    restaurant.associate = function (models) {
-        // associations can be defined here
-    };
+    }, {
+        classMethods: {
+            associate: function (models) {
+                restaurant.belongsTo(models.place, {primaryKey: 'placeId'});
+                restaurant.belongsTo(models.category, {foreignKey: 'categoryId'});
+            }
+        }
+    });
     return restaurant;
 };

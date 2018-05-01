@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         cityId: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'cities',
+                model: 'city',
                 key: 'id'
             }
         },
@@ -24,9 +24,19 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {});
-    district.associate = function (models) {
-        // associations can be defined here
+    },
+    // {
+    //     classMethods: {
+    //         associate: function (models) {
+    //             district.belongsTo(models.city, {foreignKey: 'cityId'});
+    //         }
+    //     }
+    // }
+    );
+    district.associate = (models) => {
+        models.district.belongsTo(models.city, {
+            foreignKey: 'cityId',
+        });
     };
     return district;
 };

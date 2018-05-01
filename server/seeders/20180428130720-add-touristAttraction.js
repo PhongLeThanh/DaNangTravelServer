@@ -1,10 +1,11 @@
 'use strict';
-const touristattraction = require('../models').touristAttraction;
+const touristattraction = require('../models').touristattraction;
 module.exports = {
     up: (queryInterface, Sequelize) => {
         // return touristattraction.create({
-        //     id: '4',
-        //     cost: '0',
+        //     id: '6',
+        //     categoryId:'3',
+        //     cost: '0.0',
         //     moreInformation: 'Thong tin them ve dia diem'
         // })
         //     .then(hotel => {

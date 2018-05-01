@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
         locationId: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'locations',
+                model: 'location',
                 key: 'id'
             }
         },
         categoryId: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'categories',
+                model: 'category',
                 key: 'id'
             }
         },
@@ -50,9 +50,23 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {});
-    place.associate = function (models) {
-        // associations can be defined here
+    },
+    //     {
+    //     classMethods: {
+    //         associate :function (models) {
+    //             models.place.belongsTo(models.location, {foreignKey: 'locationId'});
+    //             models.place.belongsTo(models.category, {foreignKey: 'categoryId'});
+    //         }
+    //     }
+    // }
+    );
+    place.associate = (models) => {
+        models.place.belongsTo(models.category, {
+            foreignKey: 'categoryId',
+        });
+        models.place.belongsTo(models.location,{
+           foreignKey: 'locationId',
+        });
     };
     return place;
 };

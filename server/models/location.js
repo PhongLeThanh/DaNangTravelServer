@@ -6,10 +6,10 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        districtID: {
+        districtId: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'districts',
+                model: 'district',
                 key: 'id'
             }
         },
@@ -33,9 +33,19 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {});
-    location.associate = function (models) {
-        // associations can be defined here
+    },
+    //     {
+    //     classMethods: {
+    //         associate: function (models) {
+    //             location.belongsTo(models.district, {foreignKey: 'districtId'});
+    //         }
+    //     }
+    // }
+    );
+    location.associate = (models) => {
+        models.location.belongsTo(models.district, {
+            foreignKey: 'districtId',
+        });
     };
     return location;
 };

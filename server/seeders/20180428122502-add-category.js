@@ -3,7 +3,7 @@ const category = require('../models').category;
 module.exports = {
     up: (queryInterface, Sequelize) => {
         // return category.create({
-        //     categoryName: 'TouristAttraction'
+        //     categoryName: 'touristattraction'
         // })
         //     .then(location => {
         //         console.log(location)

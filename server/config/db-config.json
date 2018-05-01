@@ -5,7 +5,10 @@
     "database": "travel-danang",
     "host": "127.0.0.1",
     "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName":true
+    }
   },
 
   "staging": {
@@ -14,7 +17,10 @@
     "database": "blog-staging",
     "host": "127.0.0.1",
     "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName":true
+    }
   },
 
   "production": {
@@ -23,7 +29,10 @@
     "database": "blog",
     "host": "127.0.0.1",
     "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName":true
+    }
   },
   "test": {
     "username": "username",
@@ -31,6 +40,9 @@
     "database": "blog-test",
     "host": "127.0.0.1",
     "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName":true
+    }
   }
 }

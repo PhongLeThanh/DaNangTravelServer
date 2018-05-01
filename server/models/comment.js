@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
         userId: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'users',
+                model: 'user',
                 key: 'id'
             }
         },
         placeId: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'places',
+                model: 'place',
                 key: 'id'
             }
         },
@@ -35,9 +35,13 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    }, {});
-    comment.associate = function (models) {
-        // associations can be defined here
-    };
+    },  {
+        classMethods: {
+            associate: function (models) {
+                comment.belongsTo(models.user, {foreignKey: 'userId'});
+                comment.belongsTo(models.place, {foreignKey: 'placeId'});
+            }
+        }
+    });
     return comment;
 };

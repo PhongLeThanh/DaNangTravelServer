@@ -1,20 +1,14 @@
 'use strict';
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('touristAttractions', {
+        return queryInterface.createTable('category', {
             id: {
                 allowNull: false,
+                autoIncrement: true,
                 primaryKey: true,
-                type: Sequelize.INTEGER,
-                references: {
-                    model: 'places',
-                    key: 'id'
-                }
+                type: Sequelize.INTEGER
             },
-            ticket: {
-                type: Sequelize.DOUBLE
-            },
-            moreInformation: {
+            categoryName: {
                 type: Sequelize.STRING
             },
             createdAt: {
@@ -28,6 +22,6 @@ module.exports = {
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('touristAttractions');
+        return queryInterface.dropTable('category');
     }
 };

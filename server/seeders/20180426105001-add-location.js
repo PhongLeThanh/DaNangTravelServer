@@ -5,10 +5,10 @@ module.exports = {
         // return location.create({
         //     id: '4307',
         //     districtId: '4307',
-        //     locationName: 'Cẩm Lệ',
+        //     locationName: 'Hoà Vang',
         //     picture: '',
         //     description: '',
-        //     map: '16.0159913,108.1741294'
+        //     map: '16.0669641,107.9512074'
         // })
         //     .then(location => {
         //         console.log(location)
