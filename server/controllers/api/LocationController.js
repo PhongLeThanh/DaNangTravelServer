@@ -59,6 +59,20 @@ class LocationController {
             Response.error(res, e, HttpStatus.BAD_REQUEST)
         }
     }
+    viewById = async(req, res) => {
+        try {
+           let locationIdReq = req.param('id');
+           let location = await locationRepository.find({
+               where :{
+                   id : locationIdReq
+               }
+           })
+            return Response.success(res, location);
+        }
+        catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    }
 
 }
 

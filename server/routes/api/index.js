@@ -7,6 +7,7 @@ import RestaurantRouter from './RestaurantRouter'
 import HotelRouter from './HotelRouter'
 import TouristAttractionRouter from './TouristAttractionRouter'
 import UserRouter from './UserRouter'
+import ProfileRouter from './ProfileRouter'
 
 import {Router} from 'express';
 
@@ -21,5 +22,6 @@ router.use('/restaurants', RestaurantRouter);
 router.use('/hotels', HotelRouter);
 router.use('/touristattractions', TouristAttractionRouter);
 router.use('/users', UserRouter);
+router.use('/profiles',ProfileRouter)
 
 export default router;

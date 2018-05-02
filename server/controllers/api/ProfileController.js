@@ -11,57 +11,64 @@ let sequelize = new Sequelize(connection.database, connection.username, connecti
 const profileRepository = new ProfileRepository();
 
 class ProfileController {
-    // index = async (req, res) => {
-    //     try {
-    //         let users = await userRepository.find();
-    //         return Response.success(res, users);
-    //     }
-    //     catch (e) {
-    //         return Response.error(res, e, HttpStatus.BAD_REQUEST);
-    //     }
-    // };
-    //
-    // view = async (req, res) => {
-    //     try {
-    //         let userId = req.param('id');
-    //         let user = await userRepository.findOne({
-    //             where: {
-    //                 id: userId
-    //             }
-    //         });
-    //         return Response.success(res, user);
-    //     }
-    //     catch (e) {
-    //         return Response.error(res, e, HttpStatus.BAD_REQUEST);
-    //     }
-    // };
-    //
-    // update = async (req, res) => {
-    //     try {
-    //         let userId = req.param('id');
-    //         let body = req.body;
-    //         let comment = await userRepository.update(body, {
-    //             where: {
-    //                 id: userId
-    //             }
-    //         });
-    //         return Response.success(res, comment)
-    //     } catch (e) {
-    //         return Response.error(res, e, HttpStatus.BAD_REQUEST);
-    //     }
-    // };
-    // create = async (req, res) => {
-    //     try {
-    //         console.log(req.body);
-    //         let userReq = req.body;
-    //         let user = await userRepository.create(userReq);
-    //         return Response.success(res, user);
-    //     }
-    //     catch (e) {
-    //         console.log(e);
-    //         return Response.error(res, e, HttpStatus.BAD_REQUEST);
-    //     }
-    // };
+    index = async (req, res) => {
+        try {
+            let userProfile = await profileRepository.find({
+                include : {
+                    model : user,
+                    attributes: ['username','email','role']
+                }
+            });
+            return Response.success(res, userProfile);
+        }
+        catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+
+    view = async (req, res) => {
+        try {
+            let userId = req.param('id');
+            let userProfile = await profileRepository.findOne({
+                where: {
+                    id: userId
+                },include : {
+                    model : user,
+                    attributes: ['username','email','role']
+                }
+            });
+            return Response.success(res, userProfile);
+        }
+        catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+
+    update = async (req, res) => {
+        try {
+            let profileId = req.param('id');
+            let body = req.body;
+            let userProfile = await profileRepository.update(body, {
+                where: {
+                    id: profileId
+                }
+            });
+            return Response.success(res, userProfile)
+        } catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+    create = async (req, res) => {
+        try {
+            let userReq = req.body;
+            let userProfile = await profileRepository.create(userReq);
+            return Response.success(res, userProfile);
+        }
+        catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+
     // searchByName = async (req, res) => {
     //     try {
     //         console.log(req.body);

@@ -24,7 +24,7 @@ class DistrictController {
     //     try {
     //         //viet ham insert o day
     //         let data = req.body;
-    //         let returnData = await locationRepository.create(data);
+    //         let returnData = await .create(data);
     //         return Response.success(res, returnData);
     //     }
     //     catch (e) {
