@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ccc3a73-2aaf-4939-968d-6dd9e377b472" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/api/DistrictController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/DistrictController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/api/LocationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/LocationController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/api/ProfileController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/ProfileController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/LocationRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/LocationRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,42 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProfileRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/api/ProfileRouter.js">
+      <file leaf-file-name="ImageController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/api/ImageController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/controllers/api/ProfileController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-390">
-              <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/models/image.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/controllers/api/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +32,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="420">
+              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -74,13 +41,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/api/UserRouter.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/controllers/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="35" />
+            <state relative-caret-position="345">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/api/ImageRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="e#1#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,8 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/migrations/20180430070445-create-district.js" />
-        <option value="$PROJECT_DIR$/server/seeders/20180426103712-add-district.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180430061340-create-location.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180430071935-create-location.js" />
         <option value="$PROJECT_DIR$/server/seeders/20180426105001-add-location.js" />
@@ -144,7 +121,6 @@
         <option value="$PROJECT_DIR$/server/repositories/ImageRepository.js" />
         <option value="$PROJECT_DIR$/server/repositories/index.js" />
         <option value="$PROJECT_DIR$/server/routes/api/UserRouter.js" />
-        <option value="$PROJECT_DIR$/server/controllers/api/index.js" />
         <option value="$PROJECT_DIR$/server/models/profile.js" />
         <option value="$PROJECT_DIR$/server/models/user.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/UserController.js" />
@@ -156,8 +132,11 @@
         <option value="$PROJECT_DIR$/server/controllers/api/LocationController.js" />
         <option value="$PROJECT_DIR$/server/routes/api/LocationRouter.js" />
         <option value="$PROJECT_DIR$/server/routes/api/ProfileRouter.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/index.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/ProfileController.js" />
+        <option value="$PROJECT_DIR$/server/routes/api/ImageController.js" />
+        <option value="$PROJECT_DIR$/server/routes/api/index.js" />
+        <option value="$PROJECT_DIR$/server/routes/api/ImageRouter.js" />
+        <option value="$PROJECT_DIR$/server/controllers/api/index.js" />
       </list>
     </option>
   </component>
@@ -236,7 +215,7 @@
               <item name="DanangTravelServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="DanangTravelServer" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="middlewares" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DanangTravelServer" type="b2602c69:ProjectViewProjectNode" />
@@ -248,7 +227,7 @@
               <item name="DanangTravelServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="DanangTravelServer" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DanangTravelServer" type="b2602c69:ProjectViewProjectNode" />
@@ -263,13 +242,6 @@
               <item name="routes" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DanangTravelServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DanangTravelServer" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -283,6 +255,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/controllers/api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/models" />
     </key>
@@ -321,12 +296,12 @@
       <workItem from="1525106804965" duration="709000" />
       <workItem from="1525142625636" duration="7339000" />
       <workItem from="1525231099785" duration="8465000" />
-      <workItem from="1525249704068" duration="5422000" />
+      <workItem from="1525249704068" duration="6006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121401000" />
+    <option name="totallyTimeSpent" value="121985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -341,7 +316,7 @@
     <frame x="1984" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26056337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3348983" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917318" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -349,7 +324,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32917318" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32917318" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -388,8 +363,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/StudentController.js" />
-    <entry file="file://$PROJECT_DIR$/server/routes/api/StudentRouter.js" />
     <entry file="file://$PROJECT_DIR$/server/routes/api/CategoryRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -429,13 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/db-config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" selection-start-line="15" selection-start-column="16" selection-end-line="22" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -723,10 +689,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/ProfileController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-615">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/db-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/ImageController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/ImageRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="420">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -735,26 +745,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="345">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/ProfileController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/image.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
