@@ -2,6 +2,7 @@ import HttpStatus from 'http-status';
 import Response from '../../helpers/Response'
 import PlaceRepository from '../../repositories/PlaceRepository'
 import CategoryRepository from '../../repositories/CategoryRepository'
+import CommentRepository from '../../repositories/CommentRepository'
 import {category, comment, hotel, location, restaurant, touristattraction} from '../../models/index';
 
 const DB = require('../../config/db-config.json');
@@ -11,11 +12,20 @@ let sequelize = new Sequelize(connection.database, connection.username, connecti
 
 const placeRepository = new PlaceRepository();
 const categoryRepository = new CategoryRepository();
+const commentRepository = new CommentRepository();
 
 class PlaceController {
     index = async (req, res) => {
         try {
-            let places = await placeRepository.find({});
+            let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                //attributes: ['place.*', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numCount']],
+                include: {
+                    model: comment,
+                    attributes: []
+                },
+                group: ['place.id', 'comments.id', 'comments.placeId'],
+            });
             console.log(places)
             return Response.success(res, places);
         }
@@ -52,6 +62,7 @@ class PlaceController {
         try {
             let placeIdReq = req.param('id');
             let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 where: {
                     id: placeIdReq
                 },
@@ -65,8 +76,9 @@ class PlaceController {
                 }, {
                     model: hotel
                 }, {
-                    model: comment
-                }]
+                    model: comment,
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id'],
             });
 
             return Response.success(res, places);
@@ -77,17 +89,19 @@ class PlaceController {
     viewTopPlace = async (req, res) => {
         try {
             let places = await placeRepository.find({
-                orderby: 'rating', limit: 2,
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 include: [{
                     model: category,
                     attributes: ['categoryName'],
                 }, {
-                    model: restaurant
-                }, {
-                    model: touristattraction
-                }, {
-                    model: hotel
-                }]
+                    model: comment,
+                    attributes: [],
+                    duplicating: false,
+                    required: false
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id'],
+                order: ['rating'], limit: 2,
+
             });
             return Response.success(res, places);
         } catch (e) {
@@ -98,20 +112,21 @@ class PlaceController {
         try {
             let categoryIdReq = req.param('categoryId');
             let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 where: {
                     categoryId: categoryIdReq
                 },
-                orderby: 'rating', limit: 2,
                 include: [{
                     model: category,
                     attributes: ['categoryName'],
-                }, {
-                    model: restaurant
-                }, {
-                    model: touristattraction
-                }, {
-                    model: hotel
-                }]
+                },{
+                    model: comment,
+                    attributes: [],
+                    duplicating: false,
+                    required: false
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id'],
+                order: ['rating'], limit: 2,
             });
             return Response.success(res, places);
         } catch (e) {
@@ -124,13 +139,20 @@ class PlaceController {
             let locationIdReq = req.param('locationId');
             console.log(locationIdReq);
             let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 where: {
                     locationId: locationIdReq
                 },
-                include: {
+                include: [{
                     model: location,
                     attributes: ['locationName']
-                }
+                }, {
+                    model: comment,
+                    attributes: [],
+                    duplicating: false,
+                    required: false
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId','location.id'],
             });
             console.log(places);
             return Response.success(res, places);
@@ -142,13 +164,20 @@ class PlaceController {
         try {
             let categoryIdReq = req.param('categoryId');
             let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 where: {
                     categoryId: categoryIdReq
                 },
-                include: {
+                include: [{
                     model: category,
                     attributes: ['categoryName']
-                }
+                },{
+                    model: comment,
+                    attributes: [],
+                    duplicating: false,
+                    required: false
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId','category.id'],
             });
             return Response.success(res, places)
         } catch (e) {
@@ -159,15 +188,16 @@ class PlaceController {
         try {
             let query = req.body.query;
             let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 where: {
                     placeName: {
                         ilike: '%' + query + '%'
                     }
                 },
                 include: [{
-                        model: category,
-                        attributes: ['categoryName']
-                    },
+                    model: category,
+                    attributes: ['categoryName']
+                },
                     {
                         model: restaurant
                     }, {
@@ -175,7 +205,8 @@ class PlaceController {
                     }, {
                         model: touristattraction
                     }, {
-                        model: comment
+                        model: comment,
+
                     }]
             });
             return Response.success(res, places);
