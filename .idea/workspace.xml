@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ccc3a73-2aaf-4939-968d-6dd9e377b472" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/server/public/uploads/bg_hotel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/uploads/bg_place.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/uploads/bg_restaurant.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controllers/api/PlaceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/PlaceController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/ImageRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/ImageRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/place.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/place.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/302d4b32-825c-423d-a28c-c956b6c68816.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/5bddc4e2-dfc5-46c4-bd15-6084931deaef.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/6cccd328-8f7b-4d55-abff-828967845316.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/879aa5aa-919e-40f0-b89e-4880bfa67ebc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/922dab6f-2119-4238-b533-2ccf96074e53.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/a1677c9c-24ea-4a99-bcf3-02657c057b13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/b5029824-404e-4799-a451-0bd5598d5b75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/de851c87-8aeb-4eb6-93f2-72131f9a45e0.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/de851c87-8aeb-4eb6-93f2-72131f9a45e0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/ded4d958-32aa-481e-852e-ae374cb8b2a3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/e0f09a59-5963-4ee0-b0cf-6142f77fedba.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/ed391b91-0dc5-42b6-b3bb-0470c67e4009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/sach1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/sach2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/uploads/sach3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/PlaceRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/PlaceRouter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,18 +38,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlaceController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="147" column="48" lean-forward="true" selection-start-line="147" selection-start-column="48" selection-end-line="147" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlaceRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/api/PlaceRouter.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -38,6 +46,54 @@
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlaceController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TouristAttractionController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/api/TouristAttractionController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TouristAttractionRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/api/TouristAttractionRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/api/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HotelRouter.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/routes/api/HotelRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="1" column="68" lean-forward="true" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -63,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/migrations/20180430071935-create-location.js" />
         <option value="$PROJECT_DIR$/server/seeders/20180426105001-add-location.js" />
         <option value="$PROJECT_DIR$/server/seeders/20180428122502-add-category.js" />
         <option value="$PROJECT_DIR$/server/seeders/20180428123024-add-place.js" />
@@ -101,8 +156,6 @@
         <option value="$PROJECT_DIR$/server/models/user.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/UserController.js" />
         <option value="$PROJECT_DIR$/server/models/comment.js" />
-        <option value="$PROJECT_DIR$/server/models/place.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/PlaceRouter.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/DistrictController.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/LocationController.js" />
         <option value="$PROJECT_DIR$/server/routes/api/LocationRouter.js" />
@@ -113,6 +166,9 @@
         <option value="$PROJECT_DIR$/server/controllers/api/index.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/ImageController.js" />
         <option value="$PROJECT_DIR$/server/routes/api/ImageRouter.js" />
+        <option value="$PROJECT_DIR$/server/models/image.js" />
+        <option value="$PROJECT_DIR$/server/models/place.js" />
+        <option value="$PROJECT_DIR$/server/routes/api/PlaceRouter.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/PlaceController.js" />
       </list>
     </option>
@@ -239,11 +295,12 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/public/uploads" />
+      <recent name="$PROJECT_DIR$/server/models" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/controllers/api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -282,12 +339,16 @@
       <workItem from="1525231099785" duration="8465000" />
       <workItem from="1525249704068" duration="6358000" />
       <workItem from="1525351702477" duration="9498000" />
-      <workItem from="1525366909215" duration="3523000" />
+      <workItem from="1525366909215" duration="3575000" />
+      <workItem from="1525408202001" duration="598000" />
+      <workItem from="1525420041445" duration="635000" />
+      <workItem from="1525449880959" duration="4932000" />
+      <workItem from="1525500794783" duration="5587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135358000" />
+    <option name="totallyTimeSpent" value="147162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,15 +362,16 @@
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13100436" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13100436" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917318" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21930745" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21930745" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,7 +380,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -362,9 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="15" lean-forward="true" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,38 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/TouristAttractionController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/HotelController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/RestaurantRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/HotelRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="true" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/TouristAttractionRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -551,27 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/place.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/api/DistrictController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -625,9 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,9 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/image.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -669,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/ImageRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -687,9 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,9 +683,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/place.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="78" column="2" lean-forward="true" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -713,13 +724,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/TouristAttractionController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/HotelController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/TouristAttractionRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="147" column="48" lean-forward="true" selection-start-line="147" selection-start-column="48" selection-end-line="147" selection-end-column="48" />
+        <state relative-caret-position="119">
+          <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/HotelRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="68" lean-forward="true" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
         </state>
       </provider>
     </entry>

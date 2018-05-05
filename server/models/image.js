@@ -25,12 +25,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
-    },  {
-        classMethods: {
-            associate: function (models) {
-                image.belongsTo(models.place, {primaryKey: 'placeId'});
-            }
-        }
     });
+    image.associate = models => {
+        models.image.belongsTo(models.place, {
+            foreignKey: 'placeId'
+        });
+    }
     return image;
 };

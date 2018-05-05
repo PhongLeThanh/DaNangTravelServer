@@ -3,7 +3,7 @@ import Response from '../../helpers/Response'
 import PlaceRepository from '../../repositories/PlaceRepository'
 import CategoryRepository from '../../repositories/CategoryRepository'
 import CommentRepository from '../../repositories/CommentRepository'
-import {category, comment, hotel, location, restaurant, touristattraction} from '../../models/index';
+import {category, comment, hotel, image, location, restaurant, touristattraction, user} from '../../models/index';
 
 const DB = require('../../config/db-config.json');
 const connection = DB['development'];
@@ -20,11 +20,20 @@ class PlaceController {
             let places = await placeRepository.find({
                 attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
                 //attributes: ['place.*', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numCount']],
-                include: {
+                include: [{
                     model: comment,
                     attributes: []
-                },
-                group: ['place.id', 'comments.id', 'comments.placeId'],
+                }, {
+                    model: restaurant
+                }, {
+                    model: touristattraction
+                }, {
+                    model: hotel
+                },{
+                    model: image,
+                    attributes: ['imageName']
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'restaurant.id', 'hotel.id', 'touristattraction.id','images.id'],
             });
             console.log(places)
             return Response.success(res, places);
@@ -77,8 +86,11 @@ class PlaceController {
                     model: hotel
                 }, {
                     model: comment,
+                },{
+                    model: image,
+                    attributes: ['imageName']
                 }],
-                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id'],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id','images.id'],
             });
 
             return Response.success(res, places);
@@ -98,13 +110,59 @@ class PlaceController {
                     attributes: [],
                     duplicating: false,
                     required: false
+                }, {
+                    model: image,
+                    attributes: ['imageName'],
+                    duplicating: false,
+                    required: false
                 }],
-                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id'],
-                order: ['rating'], limit: 2,
-
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'images.id'],
+                order: ['rating'], limit: 10,
             });
             return Response.success(res, places);
         } catch (e) {
+            Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+    viewTop = async (req, res) => {
+        try {
+            let categories = await categoryRepository.find();
+            let categoryIdReq = [];
+            for (let i = 0; i < categories.length; i++){
+                categoryIdReq[i] = categories[i].dataValues.id;
+            }
+            //console.log(categoryIdReq);
+            let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'waypoint', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                where: {
+                    categoryId: categoryIdReq
+                },
+                include: [{
+                    model: category,
+                    attributes: ['categoryName'],
+                }, {
+                    model: restaurant,
+                }, {
+                    model: touristattraction
+                }, {
+                    model: hotel
+                }, {
+                    model: comment,
+                    attributes: [],
+                    duplicating: false,
+                    required: false
+                }, {
+                    model: image,
+                    attributes: ['imageName'],
+                    duplicating: false,
+                    required: false
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id','images.id'],
+                order: ['rating'], limit: 10,
+            });
+            return Response.success(res, places);
+        } catch (e) {
+            console.log(e)
             Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     };
@@ -119,14 +177,19 @@ class PlaceController {
                 include: [{
                     model: category,
                     attributes: ['categoryName'],
-                },{
+                }, {
                     model: comment,
                     attributes: [],
                     duplicating: false,
                     required: false
+                }, {
+                    model: image,
+                    attributes: ['imageName'],
+                    duplicating: false,
+                    required: false
                 }],
-                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id'],
-                order: ['rating'], limit: 2,
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'images.id'],
+                order: ['rating'], limit: 10,
             });
             return Response.success(res, places);
         } catch (e) {
@@ -151,8 +214,11 @@ class PlaceController {
                     attributes: [],
                     duplicating: false,
                     required: false
+                }, {
+                    model: image,
+                    attributes: ['imageName']
                 }],
-                group: ['place.id', 'comments.id', 'comments.placeId','location.id'],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'location.id', 'images.id'],
             });
             console.log(places);
             return Response.success(res, places);
@@ -171,13 +237,16 @@ class PlaceController {
                 include: [{
                     model: category,
                     attributes: ['categoryName']
-                },{
+                }, {
                     model: comment,
                     attributes: [],
                     duplicating: false,
                     required: false
+                }, {
+                    model: image,
+                    attributes: ['imageName']
                 }],
-                group: ['place.id', 'comments.id', 'comments.placeId','category.id'],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'images.id'],
             });
             return Response.success(res, places)
         } catch (e) {
@@ -197,17 +266,19 @@ class PlaceController {
                 include: [{
                     model: category,
                     attributes: ['categoryName']
-                },
-                    {
-                        model: restaurant
-                    }, {
-                        model: hotel
-                    }, {
-                        model: touristattraction
-                    }, {
-                        model: comment,
-
-                    }]
+                }, {
+                    model: restaurant
+                }, {
+                    model: hotel
+                }, {
+                    model: touristattraction
+                }, {
+                    model: comment,
+                }, {
+                    model: image,
+                    attributes: ['imageName']
+                }],
+                group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
             });
             return Response.success(res, places);
         }
