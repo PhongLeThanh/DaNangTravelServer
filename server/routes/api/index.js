@@ -9,6 +9,7 @@ import TouristAttractionRouter from './TouristAttractionRouter'
 import UserRouter from './UserRouter'
 import ProfileRouter from './ProfileRouter'
 import ImageRouter from './ImageRouter'
+import CommentRouter from './CommentRouter'
 
 import {Router} from 'express';
 
@@ -25,5 +26,6 @@ router.use('/touristattractions', TouristAttractionRouter);
 router.use('/users', UserRouter);
 router.use('/profiles',ProfileRouter);
 router.use('/images',ImageRouter);
+router.use('/comments',CommentRouter);
 
 export default router;

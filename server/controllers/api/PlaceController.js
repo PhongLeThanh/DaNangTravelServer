@@ -366,6 +366,7 @@ class PlaceController {
                     model: touristattraction
                 }, {
                     model: comment,
+                    attributes: [],
                 }, {
                     model: image,
                     attributes: ['imageName']
@@ -401,6 +402,7 @@ class PlaceController {
                     model: touristattraction
                 }, {
                     model: comment,
+                    attributes: [],
                 }, {
                     model: image,
                     attributes: ['imageName']

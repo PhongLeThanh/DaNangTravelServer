@@ -5,10 +5,11 @@ import PlaceController from './PlaceController';
 import CategoryController from './CategoryController';
 import RestaurantController from './RestaurantController';
 import HotelController from './HotelController';
-import TouristAttractionController from  './TouristAttractionController';
+import TouristAttractionController from './TouristAttractionController';
 import UserController from './UserController'
 import ProfileController from './ProfileController'
 import ImageController from './ImageController'
+import CommentController from './CommentController'
 
 module.exports = {
     DataController,
@@ -21,5 +22,6 @@ module.exports = {
     TouristAttractionController,
     UserController,
     ProfileController,
-    ImageController
+    ImageController,
+    CommentController
 };
