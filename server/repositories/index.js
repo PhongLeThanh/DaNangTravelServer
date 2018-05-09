@@ -1,4 +1,5 @@
 import BaseRepository from './BaseRepository';
+import AuthRepository from './AuthRepository'
 import LocationRepository from './LocationRepository';
 import DistrictRepository from './DistrictRepository';
 import PlaceRepository from './PlaceRepository';
@@ -13,6 +14,7 @@ import ImageRepository from './ImageRepository';
 
 module.exports = {
     BaseRepository,
+    AuthRepository,
     LocationRepository,
     DistrictRepository,
     PlaceRepository,

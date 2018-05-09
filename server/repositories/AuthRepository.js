@@ -4,28 +4,28 @@ import FS from 'fs';
 import Path from 'path';
 import Config from '../config';
 
-const User = Model.User;
+const user = Model.user;
 
 export default class AuthRepository {
 
     async authenticate(data) {
         let {username, password} = data;
         try {
-            let user = await User.findOne({
+            let users = await user.findOne({
                 where: {
                     username: username,
-                    role: 'NORMAL_USER',
+                    role: 2,
                 },
             });
-            if (!user) {
+            if (!users) {
                 throw new Error('Not found account');
-            } else if (user.validatePassword(password)) {
+            } else if (users.validatePassword(password)) {
                 const path = Path.resolve(__dirname, '..', 'config', 'cert', 'private.key')
                 const cert = FS.readFileSync(path);
                 const token = JWT.sign(
                     {
-                        id: user.id,
-                        role: user.role
+                        id: users.id,
+                        role: users.role
                     },
                     cert,
                     {
@@ -36,8 +36,8 @@ export default class AuthRepository {
                 //-----------------
                 const refreshToken = JWT.sign(
                     {
-                        id: user.id,
-                        role: user.role
+                        id: users.id,
+                        role: users.role
                     },
                     cert,
                     {
@@ -47,7 +47,7 @@ export default class AuthRepository {
                 );
 
                 //-----------------
-                let userJson = user.toJSON();
+                let userJson = users.toJSON();
                 userJson.token = token;
                 userJson.refreshToken = refreshToken;
                 return userJson;

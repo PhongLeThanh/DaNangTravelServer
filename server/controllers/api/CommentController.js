@@ -41,11 +41,7 @@ class DistrictController {
                 },
                 include : [{
                     model : user,
-                    attributes :['username'],
-                    include :{
-                        model : profile,
-                        attributes : ['avatar']
-                    }
+                    attributes :['username','avatar']
                 }]
 
             });
@@ -63,11 +59,7 @@ class DistrictController {
                 },
                 include : [{
                     model : user,
-                    attributes :['username'],
-                    include :{
-                        model : profile,
-                        attributes : ['avatar']
-                    }
+                    attributes :['username','avatar'],
                 },{
                     model : place,
                     attributes : ['placeName']

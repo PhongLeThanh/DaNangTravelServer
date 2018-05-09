@@ -1,4 +1,5 @@
 import DataController from './DataController';
+import AuthController from './AuthController';
 import LocationController from './LocationController';
 import DistrictController from './DistrictController';
 import PlaceController from './PlaceController';
@@ -13,6 +14,7 @@ import CommentController from './CommentController'
 
 module.exports = {
     DataController,
+    AuthController,
     LocationController,
     DistrictController,
     PlaceController,

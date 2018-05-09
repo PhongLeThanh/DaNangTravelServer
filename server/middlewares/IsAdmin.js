@@ -3,7 +3,7 @@ import Response from '../helpers/Response';
 
 export default class IsAdmin {
     index = async (req, res, next) => {
-        if (req.user.role === 'ADMIN') {
+        if (req.user.role === 1) {
             next();
         } else {
             return res.status(HTTPStatus.UNAUTHORIZED)

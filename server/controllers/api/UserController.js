@@ -45,12 +45,13 @@ class UserController {
         try {
             let userId = req.param('id');
             let body = req.body;
-            let comment = await userRepository.update(body, {
+            let user = await userRepository.update(body, {
                 where: {
-                    id: userId
-                }
+                    id: userId,
+
+                }, individualHooks:true
             });
-            return Response.success(res, comment)
+            return Response.success(res, user)
         } catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
