@@ -26,7 +26,20 @@ class DistrictController {
             //viet ham insert o day
             let data = req.body;
             let returnData = await commentRepository.create(data);
-            return Response.success(res, returnData);
+            let placeIdReq = req.body.placeId;
+            let comments = await commentRepository.find({
+                where: {
+                    placeId : placeIdReq
+                },
+                include : [{
+                    model : user,
+                    attributes :['username','avatar'],
+                },{
+                    model : place,
+                    attributes : ['placeName']
+                }]
+            });
+            return Response.success(res,comments);
         }
         catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
@@ -43,7 +56,6 @@ class DistrictController {
                     model : user,
                     attributes :['username','avatar']
                 }]
-
             });
             return Response.success(res, comments);
         }catch (e) {

@@ -5,7 +5,7 @@ import Path from 'path';
 import HTTPStatus from 'http-status';
 import Response from '../helpers/Response';
 
-const User = Model.User;
+const User = Model.user;
 export default class IsAuth {
     index = async (req, res, next) => {
         let token;
@@ -36,11 +36,11 @@ export default class IsAuth {
                     .send(Response.returnError(res, error.message, HTTPStatus.BAD_REQUEST));
             }
             try {
-                let user = await User.findById(payload.id);
-                if (!user) {
+                let users = await User.findById(payload.id);
+                if (!users) {
                     throw new Error('Not found user!');
                 }
-                req.user = user;
+                req.users = users;
                 console.log("pass through middleware");
                 next();
             } catch (error) {

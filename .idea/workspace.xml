@@ -2,52 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ccc3a73-2aaf-4939-968d-6dd9e377b472" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/server/controllers/api/AuthController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/boom/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/boom/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/boom/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/boom/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/boom/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/boom/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/boom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/boom/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cryptiles/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cryptiles/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cryptiles/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cryptiles/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/node_modules/boom/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/node_modules/boom/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/node_modules/boom/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/node_modules/boom/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cryptiles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cryptiles/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/client.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/dist/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/lib/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/lib/browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/lib/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/lib/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/lib/crypto.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/lib/crypto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/lib/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/lib/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/lib/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hawk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hawk/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sntp/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sntp/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sntp/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sntp/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sntp/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sntp/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sntp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sntp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controllers/api/CommentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/CommentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/api/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middlewares/IsAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/IsAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/migrations/20180430064525-create-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/migrations/20180430064525-create-user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/repositories/AuthRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/repositories/AuthRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/repositories/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/repositories/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/UserRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/UserRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/seeders/20180428134134-add-username.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/seeders/20180428134134-add-username.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middlewares/IsAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/IsAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/CommentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/CommentRouter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,20 +22,50 @@
       <file leaf-file-name="CommentRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/api/CommentRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding>
-                <element signature="e#1#32#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/middlewares/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IsAuth.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/middlewares/IsAuth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/controllers/api/CommentController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="193">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlaceController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1979">
+              <caret line="226" column="35" lean-forward="true" selection-start-line="226" selection-start-column="35" selection-end-line="226" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -85,7 +73,7 @@
       <file leaf-file-name="UserController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controllers/api/UserController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="73">
               <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
             </state>
           </provider>
@@ -103,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="615">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -133,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/controllers/api/CategoryController.js" />
         <option value="$PROJECT_DIR$/server/routes/api/CategoryRouter.js" />
         <option value="$PROJECT_DIR$/server/models/category.js" />
         <option value="$PROJECT_DIR$/server/models/district.js" />
@@ -170,7 +157,6 @@
         <option value="$PROJECT_DIR$/server/controllers/api/PlaceController.js" />
         <option value="$PROJECT_DIR$/server/routes/api/Commentrouter.js" />
         <option value="$PROJECT_DIR$/server/routes/api/index.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/CommentRouter.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/AthController.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/AuthController.js" />
         <option value="$PROJECT_DIR$/server/controllers/api/index.js" />
@@ -179,11 +165,13 @@
         <option value="$PROJECT_DIR$/server/controllers/api/UserController.js" />
         <option value="$PROJECT_DIR$/server/repositories/AuthRepository.js" />
         <option value="$PROJECT_DIR$/server/models/profile.js" />
-        <option value="$PROJECT_DIR$/server/controllers/api/CommentController.js" />
         <option value="$PROJECT_DIR$/server/middlewares/IsAdmin.js" />
         <option value="$PROJECT_DIR$/server/routes/api/UserRouter.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180430064525-create-user.js" />
         <option value="$PROJECT_DIR$/server/models/user.js" />
+        <option value="$PROJECT_DIR$/server/routes/api/CommentRouter.js" />
+        <option value="$PROJECT_DIR$/server/middlewares/IsAuth.js" />
+        <option value="$PROJECT_DIR$/server/controllers/api/CommentController.js" />
       </list>
     </option>
   </component>
@@ -221,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,7 +307,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,12 +372,13 @@
       <workItem from="1525768957687" duration="9355000" />
       <workItem from="1525835620274" duration="4058000" />
       <workItem from="1525844160257" duration="1816000" />
-      <workItem from="1525874460337" duration="9397000" />
+      <workItem from="1525874460337" duration="9471000" />
+      <workItem from="1525929550390" duration="3390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188251000" />
+    <option name="totallyTimeSpent" value="191715000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -401,7 +390,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16648471" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843652" />
@@ -411,7 +401,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34732425" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3462749" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -427,19 +417,19 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3364632" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917318" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2527301" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -455,13 +445,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/models/location.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/migrations/20180429035551-create-hotel.js" />
     <entry file="file://$PROJECT_DIR$/server/repositories/HotelRepository.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -561,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/RestaurantController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/ProfileRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -659,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="114" lean-forward="true" selection-start-line="5" selection-end-line="5" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/ImageRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -742,46 +711,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/CommentRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#1#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/CommentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/api/UserController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/middlewares/IsAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/middlewares/IsAuth.js">
+    <entry file="file://$PROJECT_DIR$/server/models/place.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1170">
+          <caret line="78" column="2" lean-forward="true" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180430064525-create-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -795,27 +742,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/place.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="2" lean-forward="true" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180430064822-create-profile.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180430064525-create-user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="615">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/CommentRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/middlewares/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jsonwebtoken/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/middlewares/IsAuth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/UserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/RestaurantController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/PlaceController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1979">
+          <caret line="226" column="35" lean-forward="true" selection-start-line="226" selection-start-column="35" selection-end-line="226" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/api/CommentController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
         </state>
       </provider>
     </entry>
