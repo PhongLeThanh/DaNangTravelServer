@@ -36,11 +36,14 @@ module.exports = (sequelize, DataTypes) => {
         phone: {
             type: DataTypes.STRING
         },
-        waypoint: {
-            type: DataTypes.STRING
-        },
         rating: {
             type: DataTypes.INTEGER
+        },
+        longitude: {
+            type: DataTypes.DOUBLE
+        },
+        latitude: {
+            type: DataTypes.DOUBLE
         },
         createdAt: {
             allowNull: false,
@@ -50,6 +53,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             type: DataTypes.DATE
         }
+
     });
     place.associate = (models) => {
         models.place.belongsTo(models.category, {

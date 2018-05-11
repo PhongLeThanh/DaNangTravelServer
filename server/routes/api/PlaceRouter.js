@@ -15,5 +15,6 @@ router.route('/viewTopInLocation/:locationId').get(PlaceController.viewTopByLoca
 router.route('/viewTopByCategory/:categoryId').get(PlaceController.viewTopByCategoryId);
 router.route('/search').get(PlaceController.searchByName);
 router.route('/searchInCategory').get(PlaceController.searchByNameAndCategory);
+router.route('/searchAround').get(PlaceController.searchAround);
 
 export default router;
