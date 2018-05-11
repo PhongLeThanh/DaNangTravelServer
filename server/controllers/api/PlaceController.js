@@ -18,7 +18,7 @@ class PlaceController {
     index = async (req, res) => {
         try {
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 //attributes: ['place.*', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numCount']],
                 include: [{
                     model: comment,
@@ -70,7 +70,7 @@ class PlaceController {
         try {
             let placeIdReq = req.param('id');
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     id: placeIdReq
                 },
@@ -100,7 +100,7 @@ class PlaceController {
     viewTopPlace = async (req, res) => {
         try {
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 include: [{
                     model: category,
                     attributes: ['categoryName'],
@@ -132,7 +132,7 @@ class PlaceController {
             }
             //console.log(categoryIdReq);
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     categoryId: categoryIdReq
                 },
@@ -173,7 +173,7 @@ class PlaceController {
                 categoryIdReq[i] = categories[i].dataValues.id;
             }
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     categoryId: categoryIdReq,
                     locationId: locationIdReq
@@ -210,7 +210,7 @@ class PlaceController {
         try {
             let categoryIdReq = req.param('categoryId');
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     categoryId: categoryIdReq
                 },
@@ -248,7 +248,7 @@ class PlaceController {
             let locationIdReq = req.param('locationId');
             console.log(locationIdReq);
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     locationId: locationIdReq
                 },
@@ -281,7 +281,7 @@ class PlaceController {
         try {
             let categoryIdReq = req.param('categoryId');
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     categoryId: categoryIdReq
                 },
@@ -315,7 +315,7 @@ class PlaceController {
             let categoryIdReq = req.param('categoryId');
             let locationIdReq = req.param('locationId');
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     categoryId: categoryIdReq,
                     locationId: locationIdReq
@@ -349,7 +349,7 @@ class PlaceController {
         try {
             let query = req.param('query');
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     placeName: {
                         ilike: '%' + query + '%'
@@ -384,7 +384,7 @@ class PlaceController {
             let query = req.param('query');
             let categoryIdReq = req.param('categoryId');
             let places = await placeRepository.find({
-                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numComment']],
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {
                     categoryId: categoryIdReq,
                     placeName: {
@@ -420,8 +420,33 @@ class PlaceController {
             let lat1 = req.param('latitude');
             let long1 = req.param('longitude');
             let sql_q = 'SELECT "place"."id","place"."categoryId", "place"."locationId","place"."placeName", "place"."description","place"."detail", "place"."address","place"."phone","place"."latitude","place"."longitude","place"."rating", 2 * 6371 * asin(sqrt((sin(radians(("place".latitude - ' + lat1 + ') / 2))) ^ 2 +' +
-                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ' +
-                ' from "place" where "place"."categoryId" = 1 order by distance asc';
+                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment' +
+                ' from "place"' +
+                ' LEFT OUTER JOIN "comment" as comments' +
+                ' ON "place"."id"="comments"."placeId" GROUP BY "comments"."placeId","place"."id"  order by distance asc';
+            sequelize.query(sql_q, {type: sequelize.QueryTypes.SELECT})
+                .then(values => {
+                    console.log(values);
+                    return Response.success(res, values);
+                })
+                .catch(reason => {
+                    console.log(reason)
+                });
+        }
+        catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+    searchAroundByCategory = async (req, res) => {
+        try {
+            let lat1 = req.param('latitude');
+            let long1 = req.param('longitude');
+            let categoryIdReq = req.param('categoryId');
+            let sql_q = 'SELECT "place"."id","place"."categoryId", "place"."locationId","place"."placeName", "place"."description","place"."detail", "place"."address","place"."phone","place"."latitude","place"."longitude","place"."rating", 2 * 6371 * asin(sqrt((sin(radians(("place".latitude - ' + lat1 + ') / 2))) ^ 2 +' +
+                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment' +
+                ' from "place"' +
+                ' LEFT OUTER JOIN "comment" as comments' +
+                ' ON "place"."id"="comments"."placeId" WHERE "place"."categoryId" = '+categoryIdReq+' GROUP BY "comments"."placeId","place"."id"  order by distance asc';
             sequelize.query(sql_q, {type: sequelize.QueryTypes.SELECT})
                 .then(values => {
                     console.log(values);
