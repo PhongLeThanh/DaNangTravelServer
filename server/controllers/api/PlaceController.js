@@ -157,7 +157,7 @@ class PlaceController {
                     required: false
                 }],
                 group: ['place.id', 'comments.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
-                order: ['rating'], limit: 10,
+                order: ['rating'],
             });
             return Response.success(res, places);
         } catch (e) {

@@ -1,16 +1,29 @@
 import multer from 'multer';
 import HTTPStatus from 'http-status';
-import Response from '../../helpers/Response';
 import Path from 'path';
 import uuidv4 from 'uuid/v4';
-import mime from 'mime';
+import Response from '../../helpers/Response'
+import ImageRepository from '../../repositories/ImageRepository'
+import {place, user} from '../../models/index';
 
+const DB = require('../../config/db-config.json');
+const connection = DB['development'];
+const Sequelize = require('sequelize');
+let sequelize = new Sequelize(connection.database, connection.username, connection.password, connection);
+
+const imageRepository = new ImageRepository();
 
 class ImageController {
-
+    updateDatabase = async (req, res) => {
+        try {
+            let data = req.body;
+            let returnData = await imageRepository.create(data);
+            return Response.success(res, returnData);
+        } catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
     saveImage = async (req, res) => {
-
-
         console.log(req.param('extension'));
         //nhớ gửi từ client: extension trước, photo sau.
 
@@ -19,10 +32,10 @@ class ImageController {
         try {
             let storage = multer.diskStorage({
                 destination: (req, file, callback) => {
-                    callback(null, Path.join('.','server','public','uploads'));
+                    callback(null, Path.join('.', 'server', 'public', 'uploads'));
                 },
                 filename: (req, file, callback) => {
-                    callback(null, generatedId +'.'+ file.originalname.split('.').pop());
+                    callback(null, generatedId + '.' + file.originalname.split('.').pop());
                 }
             });
 
@@ -36,7 +49,7 @@ class ImageController {
                     return {
                         originalName: file.originalname,
                         generatedName: file.filename,
-                        imageUrl: 'http://' + req.headers.host +'/api/images/'+ file.filename
+                        imageUrl: 'http://' + req.headers.host + '/api/images/' + file.filename
                     }
                 });
 
