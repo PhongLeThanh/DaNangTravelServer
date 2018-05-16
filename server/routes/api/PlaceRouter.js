@@ -4,7 +4,9 @@ import PlaceController from "../../controllers/api/PlaceController";
 const router = Router();
 
 router.route('').get(PlaceController.index);
-router.route('').post(PlaceController.create)
+router.route('').post(PlaceController.create);
+router.route('/:id').put(PlaceController.update);
+router.route('/:id').delete(PlaceController.delete);
 router.route('/viewById/:id').get(PlaceController.viewByPlaceId);
 router.route('/viewByLocation/:locationId').get(PlaceController.viewByLocation);
 router.route('/viewByCategory/:categoryId').get(PlaceController.viewByCategory);

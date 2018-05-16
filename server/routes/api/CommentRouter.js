@@ -6,6 +6,7 @@ const router = Router();
 
 router.route('/').get(CommentController.index);
 router.route('/').post([IsAuth.index], CommentController.insert);
+router.route('/updateRatingPlace').post(CommentController.updateRatingPlace);
 router.route('/viewByPlace/:placeId').get(CommentController.viewByPlaceId);
 router.route('/viewByUser/:userId').get(CommentController.viewByUserId);
 

@@ -11,6 +11,7 @@ import UserRepository from './UserRepository';
 import ProfileRepository from './ProfileRepository';
 import CommentRepository from './CommentRepository';
 import ImageRepository from './ImageRepository';
+import EventRepository from './EventRepository';
 
 module.exports = {
     BaseRepository,
@@ -25,5 +26,6 @@ module.exports = {
     UserRepository,
     ProfileRepository,
     CommentRepository,
-    ImageRepository
+    ImageRepository,
+    EventRepository
 };

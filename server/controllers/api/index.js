@@ -11,6 +11,7 @@ import UserController from './UserController'
 import ProfileController from './ProfileController'
 import ImageController from './ImageController'
 import CommentController from './CommentController'
+import EventController from './EventController'
 
 module.exports = {
     DataController,
@@ -25,5 +26,6 @@ module.exports = {
     UserController,
     ProfileController,
     ImageController,
-    CommentController
+    CommentController,
+    EventController
 };

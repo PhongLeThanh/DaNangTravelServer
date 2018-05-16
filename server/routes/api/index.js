@@ -10,6 +10,7 @@ import UserRouter from './UserRouter'
 import ProfileRouter from './ProfileRouter'
 import ImageRouter from './ImageRouter'
 import CommentRouter from './CommentRouter'
+import EventRouter from './EventRouter'
 
 import {Router} from 'express';
 
@@ -27,5 +28,6 @@ router.use('/users', UserRouter);
 router.use('/profiles',ProfileRouter);
 router.use('/images',ImageRouter);
 router.use('/comments',CommentRouter);
+router.use('/events',EventRouter);
 
 export default router;
