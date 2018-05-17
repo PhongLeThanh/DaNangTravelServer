@@ -412,13 +412,13 @@ class PlaceController {
             let lat1 = req.param('latitude');
             let long1 = req.param('longitude');
             let sql_q = 'SELECT "place"."id","place"."categoryId", "place"."locationId","place"."placeName", "place"."description","place"."detail", "place"."address","place"."phone","place"."latitude","place"."longitude","place"."rating", 2 * 6371 * asin(sqrt((sin(radians(("place".latitude - ' + lat1 + ') / 2))) ^ 2 +' +
-                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment' +
+                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment,"images"."imageName" as "picture"' +
                 ' from "place"' +
-                ' LEFT OUTER JOIN "comment" as comments' +
-                ' ON "place"."id"="comments"."placeId" GROUP BY "comments"."placeId","place"."id"  order by distance asc';
-            sequelize.query(sql_q, {type: sequelize.QueryTypes.SELECT})
+                ' LEFT OUTER JOIN "comment" as comments ON "place"."id"="comments"."placeId"' +
+                ' LEFT OUTER JOIN "image" as images ON "images"."id" = (SELECT "id" from "image" where "image"."placeId" = "place"."id" order by "createdAt" desc limit 1)'+
+                ' GROUP BY "comments"."placeId","place"."id" , "images"."imageName" order by distance asc';
+            sequelize.query(sql_q, { model : image, type: sequelize.QueryTypes.SELECT})
                 .then(values => {
-                    console.log(values);
                     return Response.success(res, values);
                 })
                 .catch(reason => {
@@ -435,13 +435,13 @@ class PlaceController {
             let long1 = req.param('longitude');
             let categoryIdReq = req.param('categoryId');
             let sql_q = 'SELECT "place"."id","place"."categoryId", "place"."locationId","place"."placeName", "place"."description","place"."detail", "place"."address","place"."phone","place"."latitude","place"."longitude","place"."rating", 2 * 6371 * asin(sqrt((sin(radians(("place".latitude - ' + lat1 + ') / 2))) ^ 2 +' +
-                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment' +
+                ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment,"images"."imageName" as "picture"' +
                 ' from "place"' +
-                ' LEFT OUTER JOIN "comment" as comments' +
-                ' ON "place"."id"="comments"."placeId" WHERE "place"."categoryId" = ' + categoryIdReq + ' GROUP BY "comments"."placeId","place"."id"  order by distance asc';
+                ' LEFT OUTER JOIN "comment" as comments ON "place"."id"="comments"."placeId"' +
+                ' LEFT OUTER JOIN "image" as images ON "images"."id" = (SELECT "id" from "image" where "image"."placeId" = "place"."id" order by "createdAt" desc limit 1)'+
+                ' WHERE "place"."categoryId" = ' + categoryIdReq + ' GROUP BY "place"."id","comments"."placeId","images"."imageName" order by distance asc';
             sequelize.query(sql_q, {type: sequelize.QueryTypes.SELECT})
                 .then(values => {
-                    console.log(values);
                     return Response.success(res, values);
                 })
                 .catch(reason => {

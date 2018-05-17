@@ -12,6 +12,7 @@ import ProfileController from './ProfileController'
 import ImageController from './ImageController'
 import CommentController from './CommentController'
 import EventController from './EventController'
+import LikeEventController from './LikeEventController'
 
 module.exports = {
     DataController,
@@ -27,5 +28,6 @@ module.exports = {
     ProfileController,
     ImageController,
     CommentController,
-    EventController
+    EventController,
+    LikeEventController
 };

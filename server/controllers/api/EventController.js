@@ -1,7 +1,8 @@
 import HttpStatus from 'http-status';
 import Response from '../../helpers/Response'
 import EventRepository from '../../repositories/EventRepository'
-import {place} from '../../models/index';
+import {likeevent} from '../../models/index';
+import {event} from "../../models";
 
 const DB = require('../../config/db-config.json');
 const connection = DB['development'];
@@ -13,7 +14,19 @@ const eventRepository = new EventRepository();
 class EventController {
     index = async (req, res) => {
         try {
-            let events = await eventRepository.find();
+            let events = await eventRepository.find({
+                attributes:['id','eventName','detail','start','finish','address','latitude','longitude','image',[sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
+                include: {
+                    model: likeevent,
+                    attributes: ['userId'],
+                    duplicating: false,
+                    required: false
+                },
+                group : ['event.id','likeevents.eventId'],
+                order: [
+                    ['id', 'DESC']
+                ]
+            });
             return Response.success(res, events);
         }
         catch (e) {
@@ -56,6 +69,27 @@ class EventController {
             })
             return Response.success(res, returnData);
         } catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    };
+    viewHot = async (req, res) => {
+        try {
+            let events = await eventRepository.find({
+                attributes:['id','eventName','detail','start','finish','address','latitude','longitude','image',[sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
+                include: {
+                    model: likeevent,
+                    attributes: ['userId'],
+                    duplicating: false,
+                    required: false
+                },
+                group : ['event.id','likeevents.eventId',"likeevents.id"],
+                order: [
+                    [sequelize.literal('numlike'), 'DESC']
+                ]
+            });
+            return Response.success(res, events);
+        }
+        catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     };
