@@ -32,8 +32,9 @@ class LikeEventController{
     }
     delete = async (req,res) => {
         try {
-            let userIdReq = req.param("userId");
-            let eventIdReq = req.param("eventId");
+            let data = req.body;
+            let userIdReq = data.userId;
+            let eventIdReq = data.eventId;
             let returnData = likeEventRepository.delete({
                 where: {
                     userId : userIdReq,

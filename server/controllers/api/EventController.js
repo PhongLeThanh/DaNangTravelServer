@@ -15,14 +15,14 @@ class EventController {
     index = async (req, res) => {
         try {
             let events = await eventRepository.find({
-                attributes:['id','eventName','detail','start','finish','address','latitude','longitude','image',[sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
+                attributes: ['id', 'eventName', 'detail', 'start', 'finish', 'address', 'latitude', 'longitude', 'image', [sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
                 include: {
                     model: likeevent,
                     attributes: ['userId'],
                     duplicating: false,
                     required: false
                 },
-                group : ['event.id','likeevents.eventId'],
+                group: ['event.id', 'likeevents.eventId'],
                 order: [
                     ['id', 'DESC']
                 ]
@@ -75,14 +75,14 @@ class EventController {
     viewHot = async (req, res) => {
         try {
             let events = await eventRepository.find({
-                attributes:['id','eventName','detail','start','finish','address','latitude','longitude','image',[sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
+                attributes: ['id', 'eventName', 'detail', 'start', 'finish', 'address', 'latitude', 'longitude', 'image', [sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
                 include: {
                     model: likeevent,
                     attributes: ['userId'],
                     duplicating: false,
                     required: false
                 },
-                group : ['event.id','likeevents.eventId',"likeevents.id"],
+                group: ['event.id', 'likeevents.eventId', "likeevents.id"],
                 order: [
                     [sequelize.literal('numlike'), 'DESC']
                 ]
@@ -97,10 +97,19 @@ class EventController {
         try {
             let eventIdReq = req.param("id");
             let data = await eventRepository.find({
+                attributes: ['id', 'eventName', 'detail', 'start', 'finish', 'address', 'latitude', 'longitude', 'image', [sequelize.fn('count', sequelize.col('likeevents.eventId')), 'numlike']],
                 where: {
                     id: eventIdReq
-                }
+                },
+                include: {
+                    model: likeevent,
+                    attributes: ['userId'],
+                    duplicating: false,
+                    required: false
+                },
+                group: ['event.id', 'likeevents.eventId', 'likeevents.id'],
             });
+            console.log(data);
             return Response.success(res, data);
         } catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);

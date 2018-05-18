@@ -51,6 +51,7 @@ class UserController {
 
                 }, individualHooks:true
             });
+            console.log(user)
             return Response.success(res, user)
         } catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);

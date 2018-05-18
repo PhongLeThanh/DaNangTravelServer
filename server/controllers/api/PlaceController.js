@@ -235,7 +235,6 @@ class PlaceController {
     viewByLocation = async (req, res) => {
         try {
             let locationIdReq = req.param('locationId');
-            console.log(locationIdReq);
             let places = await placeRepository.find({
                 attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
                 where: {

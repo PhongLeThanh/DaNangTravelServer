@@ -11,6 +11,7 @@ import ProfileRouter from './ProfileRouter'
 import ImageRouter from './ImageRouter'
 import CommentRouter from './CommentRouter'
 import EventRouter from './EventRouter'
+import LikeEventRouter from './LikeEventRouter'
 
 import {Router} from 'express';
 
@@ -29,5 +30,6 @@ router.use('/profiles',ProfileRouter);
 router.use('/images',ImageRouter);
 router.use('/comments',CommentRouter);
 router.use('/events',EventRouter);
+router.use('/likeevents',LikeEventRouter);
 
 export default router;

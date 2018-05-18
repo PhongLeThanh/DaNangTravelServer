@@ -53,8 +53,10 @@ class ProfileController {
                     id: profileId
                 }
             });
+            console.log(userProfile);
             return Response.success(res, userProfile)
         } catch (e) {
+            console.log(e);
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     };
