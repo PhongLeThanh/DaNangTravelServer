@@ -34,8 +34,8 @@ module.exports = (sequelize, DataTypes) => {
         models.likeevent.belongsTo(models.user, {
             foreignKey: 'userId'
         });
-        models.likeevent.belongsTo(models.place, {
-            foreignKey: 'placeId'
+        models.likeevent.belongsTo(models.event, {
+            foreignKey: 'eventId'
         });
     };
     return likeevent;

@@ -51,12 +51,27 @@ class UserController {
 
                 }, individualHooks:true
             });
-            console.log(user)
-            return Response.success(res, user)
+            console.log(user);
+
+            return Response.success(res,user[0])
         } catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     };
+    updateAvatar = async (req,res) => {
+        try {
+            let userId = req.param('id');
+            let body = req.body;
+            let user = await userRepository.update(body,{
+                where: {
+                    id: userId,
+                }
+            });
+            return Response.success(res,user);
+        }catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    }
     create = async (req, res) => {
         try {
             console.log(req.body);

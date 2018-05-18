@@ -3,8 +3,19 @@ import Response from '../../helpers/Response'
 import PlaceRepository from '../../repositories/PlaceRepository'
 import CategoryRepository from '../../repositories/CategoryRepository'
 import CommentRepository from '../../repositories/CommentRepository'
-import {category, comment, hotel, image, location, restaurant, touristattraction, user} from '../../models/index';
+import {
+    category,
+    comment,
+    hotel,
+    image,
+    likeplace,
+    location,
+    restaurant,
+    touristattraction,
+    user
+} from '../../models/index';
 import {place} from "../../models";
+import LikePlaceRepository from "../../repositories/LikePlaceRepository";
 
 const DB = require('../../config/db-config.json');
 const connection = DB['development'];
@@ -14,6 +25,7 @@ let sequelize = new Sequelize(connection.database, connection.username, connecti
 const placeRepository = new PlaceRepository();
 const categoryRepository = new CategoryRepository();
 const commentRepository = new CommentRepository();
+const likePlaceReposotory = new LikePlaceRepository();
 
 class PlaceController {
     index = async (req, res) => {
@@ -67,17 +79,17 @@ class PlaceController {
             Response.error(res, e, HttpStatus.BAD_REQUEST)
         }
     }
-    delete = async(req,res) =>{
+    delete = async (req, res) => {
         try {
             let placeId = req.param("id");
             let returnData = await placeRepository.delete({
-                where : {
-                    id : placeId
+                where: {
+                    id: placeId
                 }
             })
-            return Response.success(res,returnData);
-        }catch (e) {
-            return Response.error(res,e,HttpStatus.BAD_REQUEST);
+            return Response.success(res, returnData);
+        } catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     };
     viewByPlaceId = async (req, res) => {
@@ -223,7 +235,7 @@ class PlaceController {
                     duplicating: false,
                     required: false
                 }],
-                group: ['place.id','comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
+                group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
                 order: ['rating'], limit: 20,
             });
             return Response.success(res, places);
@@ -261,7 +273,7 @@ class PlaceController {
                     model: image,
                     attributes: ['imageName']
                 }],
-                group: ['place.id','comments.placeId','location.id', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
+                group: ['place.id', 'comments.placeId', 'location.id', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
             });
             return Response.success(res, places);
         } catch (e) {
@@ -414,9 +426,9 @@ class PlaceController {
                 ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment,"images"."imageName" as "picture"' +
                 ' from "place"' +
                 ' LEFT OUTER JOIN "comment" as comments ON "place"."id"="comments"."placeId"' +
-                ' LEFT OUTER JOIN "image" as images ON "images"."id" = (SELECT "id" from "image" where "image"."placeId" = "place"."id" order by "createdAt" desc limit 1)'+
+                ' LEFT OUTER JOIN "image" as images ON "images"."id" = (SELECT "id" from "image" where "image"."placeId" = "place"."id" order by "createdAt" desc limit 1)' +
                 ' GROUP BY "comments"."placeId","place"."id" , "images"."imageName" order by distance asc';
-            sequelize.query(sql_q, { model : image, type: sequelize.QueryTypes.SELECT})
+            sequelize.query(sql_q, {model: image, type: sequelize.QueryTypes.SELECT})
                 .then(values => {
                     return Response.success(res, values);
                 })
@@ -437,7 +449,7 @@ class PlaceController {
                 ' cos(radians(' + lat1 + ')) * cos(radians("place".latitude)) * (sin(radians(("place".longitude - ' + long1 + ') / 2))) ^ 2)) as distance ,COUNT("comments"."placeId") as numcomment,"images"."imageName" as "picture"' +
                 ' from "place"' +
                 ' LEFT OUTER JOIN "comment" as comments ON "place"."id"="comments"."placeId"' +
-                ' LEFT OUTER JOIN "image" as images ON "images"."id" = (SELECT "id" from "image" where "image"."placeId" = "place"."id" order by "createdAt" desc limit 1)'+
+                ' LEFT OUTER JOIN "image" as images ON "images"."id" = (SELECT "id" from "image" where "image"."placeId" = "place"."id" order by "createdAt" desc limit 1)' +
                 ' WHERE "place"."categoryId" = ' + categoryIdReq + ' GROUP BY "place"."id","comments"."placeId","images"."imageName" order by distance asc';
             sequelize.query(sql_q, {type: sequelize.QueryTypes.SELECT})
                 .then(values => {
@@ -451,6 +463,50 @@ class PlaceController {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     };
+    viewLikePlace = async (req, res) => {
+        try {
+            let userIdReq = req.param("userId");
+            let data = await likePlaceReposotory.find({
+                where: {
+                    userId: userIdReq
+                }
+            });
+            let placeIdReq = [];
+            for (let i = 0; i < data.length; i++) {
+                placeIdReq[i] = data[i].dataValues.placeId;
+            }
+            let places = await placeRepository.find({
+                attributes: ['id', 'categoryId', 'locationId', 'placeName', 'description', 'detail', 'address', 'phone', 'latitude', 'longitude', 'rating', [sequelize.fn('count', sequelize.col('comments.placeId')), 'numcomment']],
+                where: {
+                    id: placeIdReq
+                },
+                include: [{
+                    model: category,
+                    attributes: ['categoryName'],
+                }, {
+                    model: restaurant,
+                }, {
+                    model: touristattraction
+                }, {
+                    model: hotel
+                }, {
+                    model: comment,
+                    attributes: [],
+                    duplicating: false,
+                    required: false
+                }, {
+                    model: image,
+                    attributes: ['imageName'],
+                    duplicating: false,
+                    required: false
+                }],
+                group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id']
+            });
+            return Response.success(res,places);
+        } catch (e) {
+            return Response.error(res, e, HttpStatus.BAD_REQUEST);
+        }
+    }
 }
 
 export default new PlaceController();

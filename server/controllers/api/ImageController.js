@@ -39,21 +39,21 @@ class ImageController {
                 }
             });
 
-            let upload = multer({storage: storage}).any('photo');
+            let upload = multer({storage: storage}).single('photo');
 
             upload(req, res, (err) => {
                 if (err) {
                     return Response.returnError(res, err, HTTPStatus.BAD_REQUEST)
                 }
-                let results = req.files.map((file) => {
-                    return {
-                        originalName: file.originalname,
-                        generatedName: file.filename,
-                        imageUrl: 'http://' + req.headers.host + '/api/images/' + file.filename
+                let result ={
+                    data: {
+                        originalName: req.file.originalname,
+                        generatedName: req.file.filename,
+                        imageUrl: 'http://' + req.headers.host + '/api/images/' + req.file.filename
                     }
-                });
+                };
 
-                Response.returnSuccess(res, results)
+                Response.returnSuccess(res, result)
             });
         }
         catch (err) {

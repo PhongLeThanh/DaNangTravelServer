@@ -13,6 +13,7 @@ import ImageController from './ImageController'
 import CommentController from './CommentController'
 import EventController from './EventController'
 import LikeEventController from './LikeEventController'
+import LikePlaceController from './LikePlaceController'
 
 module.exports = {
     DataController,
@@ -29,5 +30,6 @@ module.exports = {
     ImageController,
     CommentController,
     EventController,
-    LikeEventController
+    LikeEventController,
+    LikePlaceController
 };

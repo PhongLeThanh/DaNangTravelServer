@@ -13,6 +13,7 @@ import CommentRepository from './CommentRepository';
 import ImageRepository from './ImageRepository';
 import EventRepository from './EventRepository';
 import LikeEventRepository from './LikeEventRepository';
+import LikePlaceRepository from './LikePlaceRepository';
 
 module.exports = {
     BaseRepository,
@@ -29,5 +30,6 @@ module.exports = {
     CommentRepository,
     ImageRepository,
     EventRepository,
-    LikeEventRepository
+    LikeEventRepository,
+    LikePlaceRepository
 };

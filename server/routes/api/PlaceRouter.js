@@ -19,5 +19,6 @@ router.route('/search').get(PlaceController.searchByName);
 router.route('/searchInCategory').get(PlaceController.searchByNameAndCategory);
 router.route('/searchAround').get(PlaceController.searchAround);
 router.route('/searchAroundByCategory').get(PlaceController.searchAroundByCategory);
+router.route('/viewLikePlace/:userId').get(PlaceController.viewLikePlace);
 
 export default router;

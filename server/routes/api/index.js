@@ -12,6 +12,7 @@ import ImageRouter from './ImageRouter'
 import CommentRouter from './CommentRouter'
 import EventRouter from './EventRouter'
 import LikeEventRouter from './LikeEventRouter'
+import LikePlaceRouter from './LikePlaceRouter'
 
 import {Router} from 'express';
 
@@ -31,5 +32,6 @@ router.use('/images',ImageRouter);
 router.use('/comments',CommentRouter);
 router.use('/events',EventRouter);
 router.use('/likeevents',LikeEventRouter);
+router.use('/likeplaces',LikePlaceRouter);
 
 export default router;

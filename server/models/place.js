@@ -77,6 +77,9 @@ module.exports = (sequelize, DataTypes) => {
         models.place.hasMany(models.image,{
             primaryKey:'id',foreignKey : 'placeId'
         });
+        models.place.hasMany(models.likeplace,{
+            primaryKey:'id',foreignKey : 'placeId'
+        });
 
     };
     return place;
