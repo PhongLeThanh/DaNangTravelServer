@@ -47,6 +47,9 @@ class PlaceController {
                     attributes: ['imageName']
                 }],
                 group: ['place.id', 'comments.placeId', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
+                order: [
+                    ['id','DESC']
+                ]
             });
             return Response.success(res, places);
         }

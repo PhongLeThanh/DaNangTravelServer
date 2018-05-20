@@ -22,7 +22,7 @@ class EventController {
                     duplicating: false,
                     required: false
                 },
-                group: ['event.id', 'likeevents.eventId'],
+                group: ['event.id', 'likeevents.eventId','likeevents.id'],
                 order: [
                     ['id', 'DESC']
                 ]
