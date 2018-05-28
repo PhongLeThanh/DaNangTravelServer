@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DOUBLE
         },
         moreInformation: {
-            type: DataTypes.STRING
+            type: DataTypes.TEXT
         },
         createdAt: {
             allowNull: false,
