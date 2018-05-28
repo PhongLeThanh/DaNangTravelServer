@@ -48,7 +48,7 @@ class PlaceController {
                 }],
                 group: ['place.id', 'comments.placeId', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
                 order: [
-                    ['id','DESC']
+                    ['id', 'DESC']
                 ]
             });
             return Response.success(res, places);
@@ -161,7 +161,9 @@ class PlaceController {
                     required: false
                 }],
                 group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
-                order: ['rating'],
+                order: [
+                    ['rating', 'DESC']
+                ]
             });
             return Response.success(res, places);
         } catch (e) {
@@ -203,7 +205,9 @@ class PlaceController {
                     required: false
                 }],
                 group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
-                order: ['rating']
+                order: [
+                    ['rating', 'DESC']
+                ]
             });
             return Response.success(res, places);
         } catch (e) {
@@ -239,7 +243,8 @@ class PlaceController {
                     required: false
                 }],
                 group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
-                order: ['rating'], limit: 20,
+                order: [['rating', 'DESC']],
+                limit: 20,
             });
             return Response.success(res, places);
         } catch (e) {
@@ -505,7 +510,7 @@ class PlaceController {
                 }],
                 group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id']
             });
-            return Response.success(res,places);
+            return Response.success(res, places);
         } catch (e) {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }

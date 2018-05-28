@@ -34,6 +34,7 @@ class CommentController {
             return Response.error(res, e, HttpStatus.BAD_REQUEST);
         }
     }
+
     updateRatingPlace = async (req, res) => {
         try {
             let placeIdReq = req.body.placeId;

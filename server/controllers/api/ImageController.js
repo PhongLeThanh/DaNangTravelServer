@@ -28,7 +28,6 @@ class ImageController {
         //nhớ gửi từ client: extension trước, photo sau.
 
         let generatedId = uuidv4();
-
         try {
             let storage = multer.diskStorage({
                 destination: (req, file, callback) => {
