@@ -315,6 +315,9 @@ class PlaceController {
                     attributes: ['imageName']
                 }],
                 group: ['place.id', 'comments.placeId', 'category.id', 'restaurant.id', 'hotel.id', 'touristattraction.id', 'images.id'],
+                order: [
+                    ['rating','DESC']
+                ]
             });
             return Response.success(res, places)
         } catch (e) {
